@@ -23,12 +23,15 @@
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+% Specify the location of the included fonts
+%\fontdir[fonts/]
+
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-skyblue}
 % Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+\definecolor{awesome}{HTML}{417488}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -36,7 +39,6 @@
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
-% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
@@ -50,45 +52,41 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Claud D.}{Park}
-\position{Site Reliability Engineer{\enskip\cdotp\enskip}Software Architect}
-\address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+% \photo{./resources/profile.png}
+\name{Pablo}{Koll}
+\position{Software Developer{\enskip\cdotp\enskip}at Balloon Group}
+\address{Madrid, Spain}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-%\dateofbirth{January 1st, 1970}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
+\mobile{(+34) 663654345}
+\email{pablokollm@gmail.com}
+\linkedin{pablo-koll}
+\homepage{www.pablokoll.com}
+\github{pablokoll}
+\gitlab{pablokoll}
+\lang{en/es}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
-% \medium{medium-id}
-% \kaggle{kaggle-id}
-% \hackerrank{hackerrank-id}
+% \medium{madium-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
-% \extrainfo{extra information}
-
-\quote{``Be the change that you want to see in the world."}
+% \extrainfo{es/en}
+% \quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal information
+% Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader
-
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {Pablo Koll~~~·~~~Curriculum Vitae}
   {\thepage}
 
 
@@ -96,15 +94,17 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
 \input{cv/skills.tex}
+\vspace{3mm}
 \input{cv/experience.tex}
+\vspace{5mm}
+\input{cv/education.tex}
+\vspace{3mm}
 \input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/certificates.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+% \input{cv/honors.tex}
+% \input{cv/presentation.tex}
+% \input{cv/writing.tex}
+% \input{cv/committees.tex}
 
 
 %-------------------------------------------------------------------------------
