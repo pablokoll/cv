@@ -1,1 +1,1 @@
-cp ../cv.pdf ../../../../
+npm run export-cvs
