@@ -21,6 +21,6 @@
 ## Mac OS X metadata files:
 *.DS_Store
 
+.env
 node_modules
 package-lock.json
-.env
