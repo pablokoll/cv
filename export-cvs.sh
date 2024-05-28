@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xelatex './cv.tex'
+
 branch_name=$(git rev-parse --abbrev-ref HEAD)
 echo "$branch_name"
 file_name=''
