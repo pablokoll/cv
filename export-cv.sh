@@ -1,6 +1,9 @@
 #!/bin/sh
 
-xelatex ./cv.tex
+xelatex './cv.pdf'
+
+git add .
+git commit -m 'updated cv file' --no-verify
 
 branch_name=$(git rev-parse --abbrev-ref HEAD)
 echo "$branch_name"
