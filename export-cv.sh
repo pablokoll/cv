@@ -1,7 +1,24 @@
 #!/bin/sh
-
 set -e
-export PATH="/c/texlive/bin/windows/$PATH" # "Pxelatex"
+
+# Verifica si xelatex está instalado
+if ! command -v xelatex &> /dev/null; then
+    echo "xelatex no está instalado. Instalando texlive-xetex..."
+    # Detectar el sistema operativo y usar el comando de instalación adecuado
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        brew install mactex
+    else
+        echo "Sistema operativo no soportado para la instalación automática de xelatex"
+        exit 1
+    fi
+else
+    echo "xelatex ya está instalado"
+fi
+
+echo "Exportando CV usando XeLaTeX..."
 
 xelatex './cv.tex'
 
