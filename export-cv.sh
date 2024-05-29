@@ -1,5 +1,8 @@
 #!/bin/sh
 
+set -e
+export PATH="/c/texlive/bin/windows/$PATH" # "Pxelatex"
+
 xelatex './cv.tex'
 
 git add .
