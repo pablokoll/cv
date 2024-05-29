@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xelatex './cv.tex.'
+xelatex './cv.tex'
 
 git add .
 git commit -m 'updated cv file' --no-verify
