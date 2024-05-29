@@ -8,11 +8,11 @@ if ! command -v xelatex &> /dev/null; then
     # Detectar el sistema operativo y usar el comando de instalación adecuado
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         if [ -x "$(command -v apt-get)" ]; then
-            echo "Instalando texlive-xetex en Linux (apt-get)..."
+            echo "Installing texlive-xetex in Linux (apt-get)..."
             sudo apt-get update
             sudo apt-get install -y texlive-xetex
         elif [ -x "$(command -v dnf)" ]; then
-            echo "Instalando texlive-xetex en Linux (dnf)..."
+            echo "Installing texlive-xetex in Linux (dnf)..."
             sudo dnf install -y texlive-xetex
         else
             echo "No se pudo detectar el manejador de paquetes adecuado en Linux."
