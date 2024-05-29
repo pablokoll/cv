@@ -1,0 +1,17 @@
+name: Remote Dispatch Action Initiator
+
+on:
+  push:
+  repository_dispatch:
+  workflow_dispatch: # Permite ejecutar manualmente
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch Event
+        run: |
+          curl -X POST https://api.github.com/repos/pablokoll/portfolio/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.GITHUB_TOKEN }} \
+          --data '{"event_type": "cv updated", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
