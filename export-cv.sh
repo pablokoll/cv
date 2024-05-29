@@ -1,6 +1,7 @@
 #!/bin/sh
 
-xelatex './cv.tex'
+git add .
+git commit -m "Update CV"
 
 branch_name=$(git rev-parse --abbrev-ref HEAD)
 echo "$branch_name"
