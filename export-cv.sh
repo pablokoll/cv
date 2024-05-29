@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-echo $OSTYPE
+
 # Verificar si xelatex está instalado
 if ! command -v xelatex &> /dev/null; then
     echo "xelatex no está instalado. Intentando instalar..."
@@ -35,7 +35,7 @@ fi
 xelatex './cv.tex'
 
 git add .
-git commit -m 'updated cv file' --no-verify
+# git commit -m 'updated cv file' --no-verify
 
 branch_name=$(git rev-parse --abbrev-ref HEAD)
 echo "$branch_name"
