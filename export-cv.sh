@@ -21,3 +21,5 @@ source './.env'
 cp './cv.pdf' $EXPORT_ROUTE  # Reemplaza las rutas por las adecuadas
 
 mv "$EXPORT_ROUTE/cv.pdf" "$EXPORT_ROUTE/$file_name"
+
+git push
