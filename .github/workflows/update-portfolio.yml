@@ -24,7 +24,7 @@ jobs:
         steps:
             - name: Trigger update
               env:
-                  PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+                  PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                 curl -L \
                 -X POST \
