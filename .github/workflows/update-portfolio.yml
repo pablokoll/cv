@@ -1,5 +1,6 @@
 name: cv triggered
 on:
+  push:
   workflow_dispatch:
      inputs:
       update_cv_pdf:
