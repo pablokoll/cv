@@ -30,4 +30,4 @@ jobs:
                 -H "Authorization: Bearer ${{ secrets.PAT }}" \
                 -H "X-GitHub-Api-Version: 2022-11-28" \
                 https://api.github.com/repos/pablokoll/portfolio/dispatches \
-                -D "{"event_type": "update_cv_pdf","client_payload": {}}"
+                -D "{"event_type": "update_cv_pdf","client_payload": {"unit":false,"integration":true}}"
