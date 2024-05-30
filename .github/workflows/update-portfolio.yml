@@ -1,36 +1,32 @@
 name: cv triggered
 on:
-  push:
-  workflow_dispatch:
-    inputs:
-      update_cv_pdf:
-        description: 'Update cv pdf which will be triggered'
-        required: true
-        default: 'update_cv_pdf'
+    push:
+    workflow_dispatch:
+        inputs:
+            update_cv_pdf:
+                description: 'Update cv pdf which will be triggered'
+                required: true
+                default: 'update_cv_pdf'
 
-      update_cv_pdf_github_account:
-        description: 'GitHub Account Owner'
-        required: true
-        default: 'pablokoll'
+            update_cv_pdf_github_account:
+                description: 'GitHub Account Owner'
+                required: true
+                default: 'pablokoll'
 
-      update_cv_pdf_repo_github:
-        description: 'repo-name'
-        required: true
-        default: 'portfolio'
+            update_cv_pdf_repo_github:
+                description: 'repo-name'
+                required: true
+                default: 'portfolio'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    trigger:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Trigger update
-        env:
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        run: |
-          curl -X POST https://api.github.com/repos/pablokoll/portfolio/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -H "Authorization: token $PERSONAL_ACCESS_TOKEN" \
-          --data '{"event_type": "update_cv_pdf", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
+        steps:
+            - name: Trigger update
+              run: |
+                  curl -X POST https://api.github.com/repos/pablokoll/portfolio/dispatches \
+                  -H 'Accept: application/vnd.github+json' \
+                  -H 'X-GitHub-Api-Version: 2022-11-28' \
+                  -H "Authorization: Bearer ${{secrets.PERSONAL_ACCESS_TOKEN}}" \
+                  --data '{"event_type": "update_cv_pdf", "client_payload": { "repository": "" }}'
