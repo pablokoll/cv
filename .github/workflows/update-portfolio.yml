@@ -28,6 +28,6 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/pablokoll/portfolio/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
           --data '{"event_type": "update_cv_pdf", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - uses: actions/checkout@v4
