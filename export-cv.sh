@@ -1,4 +1,10 @@
 #!/bin/sh
+set -e
+
+npm run xelatex
+
+git add .
+# git commit -m 'updated cv file' --no-verify
 
 xelatex './cv.tex'
 
@@ -16,5 +22,6 @@ fi
 source './.env'
 
 cp './cv.pdf' $EXPORT_ROUTE  # Reemplaza las rutas por las adecuadas
+
 
 mv "$EXPORT_ROUTE/cv.pdf" "$EXPORT_ROUTE/$file_name"
