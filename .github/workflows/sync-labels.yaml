@@ -1,11 +1,13 @@
 name: Sync labels
 
+# Workflow disabled
 on:
-  push:
-    branches:
-    - master
-    paths:
-    - .github/labels.yaml
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #   - master
+  #   paths:
+  #   - .github/labels.yaml
 
 jobs:
   sync-labels:

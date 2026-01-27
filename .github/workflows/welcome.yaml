@@ -1,12 +1,14 @@
 name: Welcome for First Issue or Pull Request
 
+# Workflow disabled
 on:
-  pull_request_target:
-    types:
-    - opened
-  issues:
-    types:
-    - opened
+  workflow_dispatch:
+  # pull_request_target:
+  #   types:
+  #   - opened
+  # issues:
+  #   types:
+  #   - opened
 
 jobs:
   welcome:

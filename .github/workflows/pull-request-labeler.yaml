@@ -1,7 +1,9 @@
 name: Label Pull Requests
 
+# Workflow disabled
 on:
-- pull_request_target
+  workflow_dispatch:
+# - pull_request_target
 
 jobs:
   label-pr:
