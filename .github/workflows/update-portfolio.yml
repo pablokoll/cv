@@ -29,8 +29,8 @@ jobs:
       - name: Commit and Push to Portfolio
         run: |
           cd portfolio
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "CV Auto-Update Bot"
+          git config user.email "cv-bot@pablokoll.com"
           git add "public/Pablo Koll CV.pdf"
           git commit -m "chore: update CV PDF" || echo "No changes to commit"
           git push
