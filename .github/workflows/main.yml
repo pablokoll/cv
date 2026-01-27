@@ -1,8 +1,10 @@
 name: Compile PDFs
 
+# Workflow disabled - CV compiles locally via git hook
 on:
-  push: {}
-  pull_request: {}
+  workflow_dispatch:
+  # push: {}
+  # pull_request: {}
 
 jobs:
   build:

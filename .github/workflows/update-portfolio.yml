@@ -3,7 +3,7 @@ name: Update Portfolio CV
 on:
   push:
     branches:
-      - master
+      - cv/english
     paths:
       - 'cv.pdf'
   workflow_dispatch:
